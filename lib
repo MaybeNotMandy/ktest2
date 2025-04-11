@@ -132,11 +132,12 @@ function SimpleKavo.CreateLib(title, themeName)
     ThemeDropdownFrame.BackgroundTransparency = 1
     ThemeDropdownFrame.Position = UDim2.new(0.5, 0, 0, 0)
     ThemeDropdownFrame.Size = UDim2.new(0.35, 0, 1, 0)
+    ThemeDropdownFrame.ZIndex = 5
     
     local ThemeButton = Instance.new("TextButton")
     ThemeButton.Parent = ThemeDropdownFrame
     ThemeButton.BackgroundColor3 = currentTheme.ElementColor
-    ThemeButton.Size = UDim2.new(1, -10, 0, 20)
+    ThemeButton.Size = UDim2.new(1, 0, 0, 20)
     ThemeButton.Position = UDim2.new(0, 5, 0.25, 0)
     ThemeButton.Font = Enum.Font.Gotham
     ThemeButton.Text = themeName or "DefaultTheme"
@@ -155,6 +156,7 @@ function SimpleKavo.CreateLib(title, themeName)
     ThemeOptionsFrame.Size = UDim2.new(1, -10, 0, 0)
     ThemeOptionsFrame.Visible = false
     ThemeOptionsFrame.ClipsDescendants = true
+    ThemeOptionsFrame.ZIndex = 10
     
     local ThemeOptionsCorner = Instance.new("UICorner")
     ThemeOptionsCorner.CornerRadius = UDim.new(0, 4)
@@ -221,6 +223,7 @@ function SimpleKavo.CreateLib(title, themeName)
             OptionButton.TextColor3 = currentTheme.TextColor
             OptionButton.TextSize = 12
             OptionButton.AutoButtonColor = false
+            OptionButton.ZIndex = 11
             
             local OptionCorner = Instance.new("UICorner")
             OptionCorner.CornerRadius = UDim.new(0, 4)
